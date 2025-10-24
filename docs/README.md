@@ -7,8 +7,8 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: PuniYu
-      tagline: 高效·稳定·可高度灵活扩展 的机器人框架
+      name: puniyu
+      tagline: 一个 高性能 的机器人框架
       # text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
       actions:
         - 
@@ -18,5 +18,5 @@ config:
         -
           theme: alt
           text: 📦 Github →
-          link: https://github.com/Puniyu/Puni
+          link: https://github.com/puniyu/puniyu
 ---

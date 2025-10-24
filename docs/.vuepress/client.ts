@@ -7,6 +7,7 @@ import { defineClientConfig } from 'vuepress/client'
 // import CustomComponent from './theme/components/Custom.vue'
 
 // import './theme/styles/custom.css'
+import pluginStrore from './components/pluginStrore.vue'
 
 export default defineClientConfig({
   enhance({ app }) {
@@ -18,5 +19,6 @@ export default defineClientConfig({
 
     // your custom components
     // app.component('CustomComponent', CustomComponent)
+    app.component('pluginStrore', pluginStrore)
   },
 })

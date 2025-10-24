@@ -1,19 +1,27 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import { REPO_NAME, REPO_OWNER, REPO_URL } from './utils'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
-  title: 'PuniYu',
-  description: '糯芯机器人框架使用文档',
+  title: REPO_NAME,
+  description: 'puniyu 机器人框架使用文档',
 
   head: [
 
     ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
   ],
 
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      plugins: [
+        tailwindcss(),
+      ],
+    }
+  }),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
@@ -21,7 +29,7 @@ export default defineUserConfig({
     // hostname: 'https://your_site_url',
 
     /* 文档仓库配置，用于 editLink */
-    docsRepo: 'PuniCore/docs',
+    docsRepo: `${REPO_OWNER}/${REPO_NAME}`,
     docsDir: 'docs',
     docsBranch: 'main',
 
@@ -46,16 +54,14 @@ export default defineUserConfig({
     copyright: { 
       license: {
         name: 'MIT', // 许可证名称
-        url: 'https://github.com/PuniCore/docs/blob/main/LICENSE' // 许可证地址
+        url: `${REPO_URL}/blob/main/LICENSE` // 许可证地址
       },
       author: {
-        name: 'PuniCore', // 版权所有者名称
-        url: 'https://github.com/PuniCore' // 版权所有者地址
+        name: REPO_NAME, // 版权所有者名称
+        url: `https://github.com/${REPO_OWNER}` // 版权所有者地址
       },
       creation: 'reprint' // 创作方式
     },
-
-    blog: false, // 禁用博客
 
     /** 编译缓存，加快编译速度 */
     cache: 'filesystem',

@@ -2,7 +2,7 @@
   "name": "@puniyu/docs",
   "type": "module",
   "version": "1.0.0",
-  "description": "糯芯机器人框架使用文档",
+  "description": "puniyu 机器人框架使用文档",
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
     "overrides": {
@@ -25,11 +25,13 @@
     "vp-update": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.24",
+    "@vuepress/bundler-vite": "2.0.0-rc.26",
     "http-server": "^14.1.1",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "vue": "^3.5.22",
-    "vuepress": "2.0.0-rc.24",
-    "vuepress-theme-plume": "1.0.0-rc.164"
+    "vuepress": "2.0.0-rc.26",
+    "vuepress-theme-plume": "1.0.0-rc.173",
+    "@tailwindcss/vite": "^4.1.16",
+    "sass": "^1.93.2"
   }
 }
