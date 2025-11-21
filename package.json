@@ -1,7 +1,7 @@
 {
   "name": "@puniyu/docs",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "puniyu 机器人框架使用文档",
   "packageManager": "pnpm@10.12.4",
   "pnpm": {
