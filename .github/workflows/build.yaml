@@ -1,0 +1,27 @@
+name: Build DOCS
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 Bun
+        uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
+        with:
+          bun-version: 'latest'
+
+      - name: 构建 Docs
+        run: |
+          bun install
+          bun run docs:build
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: puniyu-docs
+          path: docs/.vuepress/dist

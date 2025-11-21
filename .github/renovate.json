@@ -3,14 +3,10 @@
   "extends": ["github>puniyu/github-action//.github/renovate"],
   "packageRules": [
     {
-      "groupName": "puniyu docs packages",
-      "matchManagers": ["pnpm"],
-      "rangeStrategy": "auto",
-      "schedule": ["at any time"],
-      "labels": [
-        "dependencies"
-      ],
-      "automerge": true
+      "groupName": "vuepress",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vue", "vuepress", "vuepress-theme-plume"],
+      "schedule": ["at any time"]
     }
   ]
 }

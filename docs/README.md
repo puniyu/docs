@@ -9,7 +9,6 @@ config:
     hero:
       name: puniyu
       tagline: 一个 高性能 的机器人框架
-      # text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
       actions:
         - 
           theme: brand
