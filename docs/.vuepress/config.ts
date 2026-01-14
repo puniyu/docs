@@ -1,26 +1,21 @@
-import { viteBundler } from '@vuepress/bundler-vite'
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
-import { REPO_NAME, REPO_OWNER, REPO_URL } from './utils'
-import tailwindcss from '@tailwindcss/vite'
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { plumeTheme } from "vuepress-theme-plume";
+import { REPO_NAME, REPO_OWNER, REPO_URL } from "./utils";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineUserConfig({
-  base: '/',
-  lang: 'zh-CN',
-  title: REPO_NAME,
-  description: 'puniyu 机器人框架使用文档',
+  base: "/",
+  lang: "zh-CN",
+  title: "puniyu",
+  description: "puniyu 机器人框架使用文档",
 
-  head: [
-
-    ['link', { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
-  ],
+  head: [["link", { rel: "icon", type: "image/x-icon", href: "favicon.ico" }]],
 
   bundler: viteBundler({
     viteOptions: {
-      plugins: [
-        tailwindcss(),
-      ],
-    }
+      plugins: [tailwindcss()],
+    },
   }),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
@@ -28,57 +23,60 @@ export default defineUserConfig({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     // hostname: 'https://your_site_url',
 
-    /* 文档仓库配置，用于 editLink */
+    logo: "favicon.ico",
+    appearance: true,
+
     docsRepo: `${REPO_OWNER}/${REPO_NAME}`,
-    docsDir: 'docs',
-    docsBranch: 'main',
+    docsDir: "docs",
+    docsBranch: "main",
+
+    social: [{ icon: "github", link: "https://github.com/puniyu/puniyu" }],
 
     /* 页内信息 */
     editLink: true,
     lastUpdated: {
       formatOptions: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric'
-      }
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+      },
     },
     // 文章贡献者
     contributors: true,
     // 文章变更历史
     changelog: {
-      maxCount: 50
+      maxCount: 50,
     },
 
-    copyright: { 
+    copyright: {
       license: {
-        name: 'MIT', // 许可证名称
-        url: `${REPO_URL}/blob/main/LICENSE` // 许可证地址
+        name: "MIT", // 许可证名称
+        url: `${REPO_URL}/blob/main/LICENSE`, // 许可证地址
       },
       author: {
         name: REPO_NAME, // 版权所有者名称
-        url: `https://github.com/${REPO_OWNER}` // 版权所有者地址
+        url: `https://github.com/${REPO_OWNER}`, // 版权所有者地址
       },
-      creation: 'reprint' // 创作方式
+      creation: "reprint", // 创作方式
     },
 
     /** 编译缓存，加快编译速度 */
-    cache: 'filesystem',
+    cache: "filesystem",
 
     /**
      * 为 markdown 文件自动添加 frontmatter 配置
      * @see https://theme-plume.vuejs.press/config/basic/#autofrontmatter
      */
     autoFrontmatter: {
-      permalink: false,  // 是否生成永久链接
+      permalink: false, // 是否生成永久链接
       createTime: true, // 是否生成创建时间
-      title: true,      // 是否生成标题
+      title: true, // 是否生成标题
     },
 
     /* 本地搜索, 默认启用 */
-    search: { provider: 'local' },
-
+    search: { provider: "local" },
 
     /**
      * Shiki 代码高亮
@@ -95,11 +93,10 @@ export default defineUserConfig({
       wordPerMinute: 300,
     },
 
-
     /**
-      * markdown
-      * @see https://theme-plume.vuejs.press/config/markdown/
-      */
+     * markdown
+     * @see https://theme-plume.vuejs.press/config/markdown/
+     */
     // markdown: {
     //   abbr: true,         // 启用 abbr 语法  *[label]: content
     //   annotation: true,   // 启用 annotation 语法  [+label]: content
@@ -174,4 +171,4 @@ export default defineUserConfig({
      */
     // encrypt: {},
   }),
-})
+});

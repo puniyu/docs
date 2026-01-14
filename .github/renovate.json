@@ -1,11 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>puniyu/github-action//.github/renovate"],
+  "extends": ["github>puniyu/.github//.github/renovate"],
   "packageRules": [
     {
       "groupName": "vuepress",
       "matchManagers": ["npm"],
-      "matchPackageNames": ["vue", "vuepress", "vuepress-theme-plume"],
+      "matchPackageNames": [
+        "vuepress",
+        "vuepress-theme-plume",
+        "@vuepress/bundler-vite"
+      ],
       "schedule": ["at any time"]
     }
   ]

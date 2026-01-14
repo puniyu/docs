@@ -18,17 +18,18 @@
   "engines": {
     "node": "^20.6.0 || >=22.0.0"
   },
+    "overrides": {
+    "vite": "npm:rolldown-vite@latest"
+  },
   "scripts": {
-    "docs:dev": "vuepress dev docs --port 33720",
-    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
-    "docs:build": "vuepress build docs --clean-cache --clean-temp",
-    "docs:preview": "http-server docs/.vuepress/dist",
+    "dev": "vuepress dev docs --port 33720 --clean-cache --clean-temp",
+    "build": "vuepress build docs --clean-cache --clean-temp",
+    "preview": "vite docs/.vuepress/dist",
     "vp-update": "pnpm dlx vp-update"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
-    "http-server": "^14.1.1",
     "sass": "^1.94.2",
     "typescript": "^5.9.3",
     "vue": "^3.5.24",

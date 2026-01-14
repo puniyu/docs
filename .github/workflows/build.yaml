@@ -18,7 +18,7 @@ jobs:
       - name: 构建 Docs
         run: |
           bun install
-          bun run docs:build
+          bun run build
 
       - name: 上传构建产物
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
