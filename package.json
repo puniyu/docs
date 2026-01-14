@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "description": "puniyu 机器人框架使用文档",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.23.0",
   "pnpm": {
     "overrides": {
       "vite": "npm:rolldown-vite@latest"
