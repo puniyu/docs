@@ -1,7 +1,7 @@
 {
   "name": "@puniyu/docs",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "puniyu 机器人框架使用文档",
   "packageManager": "pnpm@10.23.0",
   "pnpm": {
@@ -18,7 +18,7 @@
   "engines": {
     "node": "^20.6.0 || >=22.0.0"
   },
-    "overrides": {
+  "overrides": {
     "vite": "npm:rolldown-vite@latest"
   },
   "scripts": {
