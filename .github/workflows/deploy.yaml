@@ -24,7 +24,7 @@ jobs:
             puniyu.github.io
 
       - name: 部署
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           personal_token: ${{ steps.app-token.outputs.token }}
           external_repository: puniyu/puniyu.github.io
